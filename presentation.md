@@ -1,5 +1,3 @@
----
-
 # Hello!
 # [fit] I'm Max Glenister
 # [fit] UX/Front-end developer at Aris
@@ -94,32 +92,73 @@
 
 ---
 
-# [fit] Week 1: Basic VR
-
----
-
-# [fit] Week 1: Basic VR
-# [fit] Week 2: Web APIs
-
----
-
-# [fit] Week 1: Basic VR
-# [fit] Week 2: Web APIs
-# [fit] Week 3: UX of VR
-
----
-
-# [fit] Week 1: Basic VR
-# [fit] Week 2: Web APIs
-# [fit] Week 3: UX of VR
-# [fit] Week 4: Make a game
 
 ^ And then each week I broke it down into daily chunks. Each day I created a hack, and then I wrote a blog post to explain it
 
 ---
 
-# [fit] This is great for
-# [fit] content creation
+# [fit] Week 1: Basic VR
+
+---
+
+setting up a scene
+raycasters
+better raycasters with vreticle
+skyboxes and generating meshes
+loading external models
+put it together: vr pairs game
+
+---
+
+# [fit] Week 2: Web APIs
+
+---
+
+playing sounds
+speech recognition api
+html5 video
+webaudio beat sequencer
+
+aaah zombies (reticle movement)
+aaah more zombies
+
+debugging with chrome devtools
+
+---
+
+# [fit] Week 3: UX of VR
+
+---
+
+went away on holiday for a week, so did text-only posts
+
+hierarchy of needs in quick hacks
+getting in and out of fullscreen
+displaying pertinent information
+moving around in vr
+which way is north? part 1
+which way is north? part 2
+one size doesn't fit all
+
+---
+
+# [fit] Week 4: Make a game
+
+---
+
+putting it all together: tevris
+planning
+basic game board
+creating and moving pieces
+rotating pieces
+//
+//
+//
+
+---
+
+# [fit] This has been great
+# [fit] for content creation
 
 ^ I went from writing around 15 blog posts a year to writing over 30 in one month.
 
