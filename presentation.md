@@ -6,7 +6,7 @@
 
 ---
 
-![fit](CUHmlyCWwAAynvW.jpg)
+![fit](images/CUHmlyCWwAAynvW.jpg)
 # [fit] 20 Minutes into the Future
 # [fit] with Google Cardboard and Javascript
 
@@ -16,13 +16,13 @@
 
 ---
 
-![](uxofvr.png)
+![](images/uxofvr.png)
 # [fit] UX of VR
 # [fit] _*http://www.uxofvr.com*_
 
 ---
 
-![](gamedevday.png)
+![](images/gamedevday.png)
 # [fit] Game Dev Day
 # [fit] _*http://gamedevday.club*_
 
@@ -42,23 +42,23 @@
 ---
 
 
-![fit](Chat.png)
+![fit](images/Chat.png)
 
 ---
 
-![fit](Chat Copy.png)
+![fit](images/Chat Copy.png)
 
 ---
 
-![fit](Chat Copy 2.png)
+![fit](images/Chat Copy 2.png)
 
 ---
 
-![fit](Chat Copy 3.png)
+![fit](images/Chat Copy 3.png)
 
 ---
 
-![80%](google-cardboard.png)
+![80%](images/google-cardboard.png)
 # [fit] Cardboctober
 
 ---
