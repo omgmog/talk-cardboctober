@@ -45,6 +45,7 @@
 
 ---
 ## And then in September
+^ Then in September, Ben Foxall sent me a message on the Digital Oxford Slack
 
 ---
 # ...
@@ -64,11 +65,13 @@
 ---
 ![inline](images/google-cardboard.png)
 # Cardboctober
+^ So the idea of Cardboctober was born
 
 ---
 # 31 days
 ### of making things
 ### for Google Cardboard
+^ The plan was simple
 
 ---
 ![](images/easy.gif)
@@ -118,7 +121,7 @@
 ## cardboctober.xyz
 
 ---
-## That was a
+## It was a
 ## lot of work...
 
 ---
@@ -127,6 +130,7 @@
 ---
 # Lots of
 # Planning
+^ Well, for me it began with a lot of planning...
 
 ---
 ### Week 1
