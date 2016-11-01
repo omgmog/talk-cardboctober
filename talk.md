@@ -1,3 +1,5 @@
+theme: ostrich,6
+
 # Hello
 ## I'm Max Glenister
 
