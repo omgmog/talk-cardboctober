@@ -1,5 +1,5 @@
 # Hello
-### I'm Max Glenister
+## I'm Max Glenister
 
 ---
 ### omgmog.net
@@ -17,7 +17,7 @@
 #### \(we mostly make websites for pubs)
 
 ---
-### I like to
+## I like to
 ## dabble with VR
 
 ---
@@ -68,7 +68,7 @@
 ^ So the idea of Cardboctober was born
 
 ---
-# 31 days
+## 31 days
 ### of making things
 ### for Google Cardboard
 ^ The plan was simple
@@ -93,7 +93,6 @@
 ## cool things...
 
 ---
-
 ![inline fill](images/giphy-06.gif)![inline fill](images/giphy-08.gif)
 ![inline fill](images/giphy-09.gif)![inline fill](images/giphy-10.gif)
 ![inline fill](images/giphy-11.gif)![inline fill](images/giphy-13.gif)
@@ -117,8 +116,8 @@
 >By @benfoxall
 
 ---
-### Check out the hacks
-## cardboctober.xyz
+## Check them out
+### cardboctober.xyz
 
 ---
 ## It was a
@@ -128,8 +127,7 @@
 ## How did I do it?
 
 ---
-# Lots of
-# Planning
+## Lots of<br>Planning
 ^ Well, for me it began with a lot of planning...
 
 ---
@@ -137,8 +135,87 @@
 ## Basic VR
 
 ---
-// making a cube, vr input controls
+```html
+<html>
+  <body>
+    <script src="three.min.js"></script>
+    <script src="basic-vr.js"></script>
+  </body>
+</html>
+```
+---
+```javascript
+// Setup the camera, renderer, scene, etc.
 
+// Make a cube
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+var material = new THREE.MeshBasicMaterial({color: 0xff0000});
+var cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+```
+---
+```javascript
+// Called 60 times a second using rAF
+var update = function () {
+  cube.rotation.x += .1;
+  cube.rotation.z += .1;
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(update);
+};
+
+// Call it once to begin
+update();
+
+```
+
+---
+# Here's one I made earlier
+![inline](images/basic-vr.gif)
+
+---
+## But Max<br>that's not VR
+### That's just a spinning cube!
+
+---
+```html
+<html>
+  <body>
+    <script src="three.min.js"></script>
+    <script src="StereoEffect.js"></script>
+    <script src="basic-vr.js"></script>
+  </body>
+</html>
+```
+
+---
+```javascript
+// After setting up your renderer
+effect = new THREE.StereoEffect(renderer);
+effect.eyeSeparation = 1; // Set the IPD
+effect.setSize( width, height );
+
+
+// Instead of calling renderer.render(scene, camera)
+effect.render(scene, camera)
+```
+
+---
+![inline](images/basic-vr-stereo.gif)
+
+---
+#[fit] :boom: :package: 🕶 :boom:
+
+---
+#[fit] I also covered
+#[fit] some other things...
+
+---
+- Raycasting
+- Skyboxes
+- Mesh generation
+- Using .stl models
+- Creating a "match two" game
 
 ---
 ### Week 2
