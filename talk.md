@@ -8,26 +8,24 @@ theme: ostrich,6
 ---
 ### omgmog.net
 ### blog.omgmog.net
-### @omgmog on Twitter/Github
+### Twitter/Github @omgmog
 
 ^ If you know me already, it's probably through one of these places
 
 ---
 ## UX/Front-end Developer
 ### Aris Technologies
-#### \(we make online casino games)
 
 ^ For my day job I work at Aris where I design and build the UI for online casino games.
 
 ---
 ## Web designer/developer
 ### Marmalade & Jam
-#### \(we mostly make websites for pubs)
 
 ^ I also run a web design company with my wife, where I mostly design and build websites for pubs and other small businesses.
 
 ---
-## I like to
+## I also like to
 ## play with VR
 
 ^ If I find myself with any free time I like to dabble with VR. I've been messing around with VR stuff for nearly two years now
@@ -81,7 +79,7 @@ theme: ostrich,6
 ^ Sure.
 
 ---
-![inline](images/google-cardboard.png)
+![inline 50%](images/google-cardboard.png)
 # Cardboctober
 ^ And so with two days until it began, the idea of Cardboctober was born. I built a website and we announced Cardboctober at JS Oxford
 
@@ -123,7 +121,7 @@ theme: ostrich,6
 ![inline fill](images/giphy-09.gif)![inline fill](images/giphy-10.gif)
 ![inline fill](images/giphy-11.gif)![inline fill](images/giphy-13.gif)
 
-^ Including a pairs game, a beat sequencer, and a vr cinema. I'll touch on some of these more a bit more later
+^ Including a pairs game, a beat sequencer, and a vr cinema. I'll talk about some of these more a bit more later
 
 ---
 ## And so did
@@ -163,7 +161,7 @@ theme: ostrich,6
 ---
 ![](images/spreadsheet.png)
 
-^ I made a spreadsheet, in that I broke the month down in to themed weeks, and then each week in to a project per day. This really helped stopping Cardboctober seeming like an overwhelming undertaking.
+^ I made a spreadsheet, in that I broke the month down in to themed weeks, and then each week in to a project per day. This really helped to stop Cardboctober seeming like a huge undertaking.
 
 ---
 ### Week 1
@@ -173,7 +171,8 @@ theme: ostrich,6
 
 ---
 ![](images/dummies.png)
-## VR for dummies
+## VR
+### for dummies
 
 ^ For example, here's how you can get up and running with VR using JavaScript and Google Cardboard
 
@@ -189,20 +188,24 @@ theme: ostrich,6
 </html>
 ```
 
-^ First you need to create a HTML page and load three.js
+^ First you need to create an HTML page and load three.js
 
 ---
 ```javascript
 // Setup the camera, renderer, scene, etc.
 
 // Make a cube
-var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshBasicMaterial({color: 0xff0000});
-var cube = new THREE.Mesh(geometry, material);
+var geometry = new THREE.BoxGeometry(1,1,1);
+var material = new THREE.MeshBasicMaterial({
+  color: 0xff0000
+});
+
+var cube = new THREE.Mesh(geometry,material);
+
 scene.add(cube);
 ```
 
-^ Then just setup your camera, renderer, scene, etc. as you do with any Three.js project. Then define a cube and add it to your scene.
+^ Then as you do with any Three.js project, setup your camera, renderer, scene, etc. Then define a cube mesh and add it to your scene.
 
 ---
 ```javascript
@@ -218,10 +221,9 @@ var update = function () {
 update();
 ```
 
-^ Using request animation frame we can animate the scene, for example we could rotate the cube we've created on it's axis.
+^ Using request animation frame we can animate the scene, for this example we're rotating the cube we've created on it's axis.
 
 ---
-# Here's one I made earlier
 ![inline](images/basic-vr.gif)
 
 ^ Here's one I made earlier.
@@ -230,12 +232,7 @@ update();
 ## But Max<br>that's not VR
 #### That's just a spinning cube!
 
-^ Oh right yes
-
----
-![inline](images/ohright.png)
-
-^ VR needs to be 3D. So how about that? Luckily for us, three.js comes with a plugin called "stereo effect" that automatically creates a side-by-side stereoscopic view of our scene
+^ Oh right yes. VR needs to be 3D. So how about that? Luckily for us, three.js comes with a plugin called "stereo effect" that automatically creates a side-by-side stereoscopic view of our scene
 
 ---
 ```html
@@ -259,7 +256,8 @@ effect = new THREE.StereoEffect(renderer);
 effect.eyeSeparation = 1; // Set the IPD
 effect.setSize( width, height );
 
-// Instead of calling renderer.render(scene, camera) in update()
+// Instead of calling
+// renderer.render(scene, camera)
 effect.render(scene, camera)
 ```
 
@@ -271,15 +269,18 @@ effect.render(scene, camera)
 ^ And that's it. You've got a stereoscopic scene.
 
 ---
-#[fit] :boom: :package: 🕶 :boom:
+## :boom: :package: 🕶 :boom:
+###<br>
+###<br>
 
 ^ You're now a VR expert.
 
 ---
-#[fit] :boom: :package: 🕶 :boom:
+## :boom: :package: 🕶 :boom:
+###<br>
 ### blog.omgmog.net
 
-^ Don't worry about remembering all of that, as with everything else I'm talking about this evening, you can find how to do this in more detail on the cardboctober section of my blog.
+^ Don't worry about remembering all of this, as with everything else I'm talking about this evening, you can find how to do this in more detail on the cardboctober section of my blog.
 
 ---
 >Raycasting
@@ -300,7 +301,7 @@ effect.render(scene, camera)
 ### Week 2
 ## HTML5 Web APIs
 
-^ For week 2 I decided to look at using Web APIs. Web browsers can do lots of cool stuff these days, such as speech recognition or playing video/audio without plugins
+^ For week 2 I decided to look at using Web APIs.
 
 ---
 >Video
@@ -308,7 +309,7 @@ effect.render(scene, camera)
 >Speech recognition
 >Zombie Survival
 
-^ So I decided to try and put some of these web APIs to use
+^ Web browsers can do lots of cool stuff these days, such as speech recognition or playing video/audio without plugins. So I decided to try and put some of these web APIs to use
 
 ---
 ![inline](images/video.gif)
@@ -318,12 +319,12 @@ effect.render(scene, camera)
 ---
 ![inline](images/beats.gif)
 
-^ I built a beat sequencer to showcase playing sounds. It uses a selection of sounds for various instruments and was actually an adaptation from something I had done in 2D a couple of months ago.
+^ I built a beat sequencer to showcase playing sounds. You're encased in an environment where you can look around 200 degrees of rotation to pick the sounds to play in a sequence by looking at a square and tapping the screen. Behind you are some controls to pause and reset the sequencer. It uses a selection of sounds for various instruments.
 
 ---
 ![inline](images/speech.gif)
 
-^ I decided to make something that uses Speech recognition as a controller input. In this hack I set up a bunch of commands such as "move forward", "move left" and "tell a joke".
+^ I decided to make something that uses Speech recognition as a controller input. In this hack I set up a bunch of commands such as "move forward", "move left". You tap the screen and the microphone starts listening for your command, once it matches a command the ball moves around in 3D space. You can even ask it to tell you a joke.
 
 ---
 ![inline](images/zombies.gif)
@@ -337,12 +338,12 @@ effect.render(scene, camera)
 ^ For the third week I focussed mainly on writing VR UX articles rather than creating hacks...
 
 ---
-![](images/holiday1.jpg)
+![](images/holiday2.jpg)
 
 ^ Because I was on holiday
 
 ---
-![](images/holiday2.jpg)
+![](images/holiday1.jpg)
 
 ^ In the Lake district.
 
@@ -354,7 +355,7 @@ effect.render(scene, camera)
 ---
 ![inline](images/hierarchy1.png)
 
-^ You might have seen some variation of this chart before. This is a variation on Maslow's hierarchy of needs, applied to the UX of virtual reality
+^ You might have seen some variation of this chart before. This is a variation on Maslow's hierarchy of needs, applied to virtual reality
 
 ---
 ![inline](images/hierarchy2.png)
@@ -368,7 +369,7 @@ effect.render(scene, camera)
 ><br>
 >Which way is North?
 
-^ For the rest of the week I wrote about other topics, like these
+^ For the rest of the week I wrote about other topics, like these. Again, these are all on my blog, so if you want to know more you can go and read them there.
 
 ---
 ### Week 4
@@ -423,7 +424,7 @@ effect.render(scene, camera)
 ^ Doing something every day is hard.
 
 ---
-## I've learned so much about VR and 3D
+## I've learned <br>so much about <br>VR and 3D
 
 ^ Even though my hacks were quite simple, I feel like I've learned a lot. I still don't quite know what a quaternion is but I think I used one in a couple of places.
 
@@ -445,7 +446,7 @@ effect.render(scene, camera)
 ---
 ## If you're learning <br>from it others <br>will learn too
 
-^ On that note, as I've already mentioned I blogged every day through Cardboctober, and now these posts are conveniently located in one place on my blog. If you're looking to make something with JavaScript for Google Cardboard I'm sure it will be a useful resource for you.
+^ On this note, as I've already mentioned I blogged every day through Cardboctober, and now these posts are conveniently located in one place on my blog. If you're looking to make something with JavaScript for Google Cardboard I'm sure it will be a useful resource for you.
 
 ---
 ## Try not to neglect your house duties, or your loved ones will despise VR
@@ -484,17 +485,17 @@ effect.render(scene, camera)
 ---
 ## Ben: 16 hacks
 
-^ It turns out he's a much busier man than me and Pete.
+^ It turns out Ben is a much busier man than me and Pete.
 
 ---
 ><br>
 > 100~ Commits
 > 10000~ Lines of code
 
-^ Around 100 commits across the cardboctober.xyz and slash pete repos.
+^ Around 100 commits across the cardboctober.xyz and slash ben repos.
 
 ---
-## In conclusion...
+## In conclusion
 
 ^ It has been a really fun month, I've learned a lot and it has been a really worth-while experience. Now I'm looking forward to...
 
