@@ -8,7 +8,7 @@ theme: ostrich,6
 ---
 ### omgmog.net
 ### blog.omgmog.net
-### @omgmog elsewhere
+### @omgmog on Twitter/Github
 
 ^ If you know me already, it's probably through one of these places
 
@@ -17,14 +17,14 @@ theme: ostrich,6
 ### Aris Technologies
 #### \(we make online casino games)
 
-^ For my day job I design and build the UI for casino games, and the devices that make it easier for people to spend their money.
+^ For my day job I work at Aris where I design and build the UI for casino games.
 
 ---
 ## Web designer/developer
 ### Marmalade & Jam
 #### \(we mostly make websites for pubs)
 
-^ I also run a web design company with my wife, where I mostly seem to make websites for pubs
+^ I also run a web design company with my wife, where I mostly seem to make websites for pubs and other small businesses.
 
 ---
 ## I like to
@@ -36,15 +36,15 @@ theme: ostrich,6
 ![](images/CUHjrioWsAQq0On.jpg)
 ### 20 minutes into the future
 ###[fit] with Google Cardboard and JavaScript
-#### Watch it: http://omg.li/talk20mins
+### *omgmog.net/talk20mins*
 
-^ Infact, I gave a talk this time last year called "20 minutes into the future", where I explained how you can use JavaScript to make Google Cardboard experiences. If you missed it, you can check out a video and write-up at that link
+^ Infact, I gave a talk this time last year called "20 minutes into the future", where I explained how you can use JavaScript to make Google Cardboard experiences. If you missed it, you can check out a video and write-up on my website
 
 ---
 ![](images/uxofvr.png)
 ## UX of VR
-### www.uxofvr.com
-^ After that I created UXofVR.com -- a curated list of articles and resources for learning/applying good UX in your VR projects. This is now considered the "go to place" for people learning about VR UX
+### *uxofvr.com*
+^ Shortly after that I created uxofvr.com -- a curated list of articles and resources for learning/applying good UX in your VR projects.
 
 ---
 ![](images/CoCXiyCXgAATON1.jpg)
@@ -59,9 +59,6 @@ theme: ostrich,6
 ---
 ## And then in September
 ^ Then in September, Ben Foxall sent me a message on the Digital Oxford Slack
-
----
-# ...
 
 ---
 ![inline fit](images/Chat.png)
@@ -113,7 +110,7 @@ theme: ostrich,6
 ## **HARD MODE**
 ### **all of above & blog daily**
 
-^ I decided it would be fun to make something and also blog about it.
+^ I decided it would be fun to make something each day and also blog about it.
 
 ---
 ## I made some
@@ -141,7 +138,7 @@ theme: ostrich,6
 
 >By @benfoxall
 
-^ Ben's hacks were quite abstract, and I think he wrote a 3D renderer for scratch or something crazy.
+^ Ben's hacks were quite abstract, and I think he wrote a 3D renderer from scratch or something crazy.
 
 ---
 ![inline fill](images/pete-06.png)![inline fill](images/pete-15.png)
@@ -156,7 +153,7 @@ theme: ostrich,6
 ## Check them out
 ### cardboctober.xyz
 
-^ You should check them out if you didn't follow Cardboctober religiously already, all of the hacks should work in Chrome on Android on devices with a gyroscope, and will probably mostly work in Safari on iPhones
+^ You should check them out if you didn't follow Cardboctober as it happened, all of the hacks should work in Chrome on Android on devices with a gyroscope, and will probably mostly work in Safari on iPhones
 
 ---
 ## How did I do it?
@@ -166,7 +163,7 @@ theme: ostrich,6
 ---
 ![](images/spreadsheet.png)
 
-^ I made a spreadsheet and in that broke the month down in to themed weeks, and then each week in to a project per day. This really helped stopping Cardboctober seeming like an overwhelming undertaking.
+^ I made a spreadsheet, in that I broke the month down in to themed weeks, and then each week in to a project per day. This really helped stopping Cardboctober seeming like an overwhelming undertaking.
 
 ---
 ### Week 1
@@ -178,7 +175,7 @@ theme: ostrich,6
 ![](images/dummies.png)
 ## VR for dummies
 
-^ Here's how you can get up and running with VR using JavaScript and Google Cardboard
+^ For example, here's how you can get up and running with VR using JavaScript and Google Cardboard
 
 ---
 ```html
@@ -209,7 +206,6 @@ scene.add(cube);
 
 ---
 ```javascript
-// Called 60 times a second using rAF
 var update = function () {
   cube.rotation.x += .1;
   cube.rotation.z += .1;
@@ -234,10 +230,12 @@ update();
 ## But Max<br>that's not VR
 #### That's just a spinning cube!
 
+^ Oh right yes
+
 ---
 ![inline](images/ohright.png)
 
-^ Oh right yes, VR needs to be 3D. So how about that? Luckily for us, three.js comes with a plugin called "stereo effect" that automatically creates a side-by-side stereoscopic view of our scene
+^ VR needs to be 3D. So how about that? Luckily for us, three.js comes with a plugin called "stereo effect" that automatically creates a side-by-side stereoscopic view of our scene
 
 ---
 ```html
@@ -291,18 +289,18 @@ effect.render(scene, camera)
 >Using .stl models
 >and...
 
-^ In week 1 I also covered some other things
+^ In week 1 I also covered some other things... raycasting (to determine where you're looking), skyboxes, loading textures, generating 3D meshes, using pre-made models and...
 
 ---
 ![inline](images/findben.gif)
 
-^ a "match two" game.
+^ a pairs game that pulled together all of the concepts from week 1
 
 ---
 ### Week 2
 ## HTML5 Web APIs
 
-^ For week 2 I decided to look at using Web APIs. Web browsers can do lots of cool stuff these days, such as playing video/audio without plugins and speech recognition
+^ For week 2 I decided to look at using Web APIs. Web browsers can do lots of cool stuff these days, such as speech recognition or playing video/audio without plugins
 
 ---
 >Video
@@ -310,33 +308,33 @@ effect.render(scene, camera)
 >Speech recognition
 >Zombie Survival
 
-^ So I decided to try and put some of these APIs to use
+^ So I decided to try and put some of these web APIs to use
 
 ---
 ![inline](images/video.gif)
 
-^ Video playback in a scene. The twist here being that I'm extracting the dominant colors from each frame and using them to light the scene. This really made my phone struggle.
+^ I created a vr cinema to showcase Video playback in a scene. In this hack I'm extracting the dominant colors from each frame and using them to light the scene. Unfortunately, rendering video in 3D and extracting colors from each frame really made my phone choke.
 
 ---
 ![inline](images/beats.gif)
 
-^ Playing sounds. I made a beat sequencer using a selection of sounds. This was actually an adaptation from something I had done in 2D a couple of months ago.
+^ I built a beat sequencer to showcase playing sounds. It uses a selection of sounds for various instruments and was actually an adaptation from something I had done in 2D a couple of months ago.
 
 ---
 ![inline](images/speech.gif)
 
-^ Speech recognition. Using the speech recognition API, you can get a transcript of what is said and then make massive switch/case statements to use the transcript as an input.
+^ I decided to make something that uses Speech recognition as a controller input. In this hack I set up a bunch of commands such as "move forward", "move left" and "tell a joke".
 
 ---
 ![inline](images/zombies.gif)
 
-^ Zombie survival. Well this wasn't so much a use of web apis -- I just got frustrated trying to make a demo that used the gamepad API, and so decided to make this instead. For two days. Reticle based movement. The zombies move towards the player and when they get too close you die.
+^ Zombie survival. Well this wasn't so much a use of web apis -- I just got frustrated trying to make a demo that used the gamepad API, and so decided to make this instead. The zombies move towards the player and when they get too close you die. You can move around by looking at the area you wish to move to and tapping the screen.
 
 ---
 ### Week 3
 ## UX of VR
 
-^ For the third week I focussed mainly on writing articles rather than creating demos
+^ For the third week I focussed mainly on writing VR UX articles rather than creating demos...
 
 ---
 ![](images/holiday1.jpg)
@@ -351,18 +349,26 @@ effect.render(scene, camera)
 ---
 >The UX of quick Google Cardboard experiences
 
+^ For example I wrote about the UX of quick google cardboard experiences
+
 ---
 ![inline](images/hierarchy1.png)
+
+^ You might have seen some variation of this chart before
 
 ---
 ![inline](images/hierarchy2.png)
 
+^ I decided this was all that matters when you've got 2 hours a day to ship something quick and dirty.
+
 ---
 >Getting in and out of Fullscreen
->Displaying Pertinent Information
+><br>
 >Moving around in VR
+><br>
 >Which way is North?
->One size doesn't fit all
+
+^ For the rest of the week I wrote about other topics, like these
 
 ---
 ### Week 4
@@ -383,22 +389,22 @@ effect.render(scene, camera)
 ---
 ![](images/wall.jpg)
 
-^ Unfortunately, and perhaps appropriately I hit a wall and couldn't get past the collision detection and line storing when applying Tetris to VR.
+^ Unfortunately, and perhaps appropriately I hit a wall and couldn't get past the collision detection and line storing when applying Tetris to VR. I ended up writing and re-writing my implementation.
 
 ---
 ![inline](images/pram.gif)
 
-^ I was over-ambitious, so I gave up on that and throw my blocks out of the pram.
+^ In hindsight I was over-ambitious, so I gave up on that and threw my blocks out of the pram and decided to do something else instead.
 
 ---
 ![inline](images/github.gif)
 
-^ and decided to do something else instead. Here's a data visualisation of my github contributions for the past year, and there's a nice chunk for October 2016.
+^ I made a data visualisation of my github contributions for the past year. You can see there's a nice streak there for October 2016.
 
 ---
 ![inline](images/spider.gif)
 
-^ for the last day of Cardboctober, Halloween, I build a spider from shape primitives and made it crawl around in the shadows.
+^ for the last day of Cardboctober and Halloween, I build a spider from shape primitives and made it crawl around in the shadows.
 
 ---
 ![inline](images/spider.png)
@@ -415,12 +421,12 @@ effect.render(scene, camera)
 ---
 ## I've learned so much about VR and 3D
 
-^
+^ Even though my hacks were quite simple, I feel like I've learned a lot. I still don't quite know what a quaternion is but I think I used one in a couple of places.
 
 ---
-## Save time/sanity <br>by factoring out common boilerplate.
+## Save time/sanity <br>by factoring out common code.
 
-^ talk about core.js
+^ I decided early on to create a "core.js" file. This contained functions that setup the boilerplate for a three.js scene, and I also created some functions to wrap around common tasks like building meshes. If you're interested, check out my "three-skeleton" repository on Github.
 
 ---
 ## Test your ideas often, and on other people
@@ -430,12 +436,12 @@ effect.render(scene, camera)
 ---
 ## Don't worry about making it perfect
 
-^ Needs notes: you can't be precious. so many hours in a day, other commitments, need to get it the door!
+^ With quick hacks you can't be precious about making it perfect every time. There aren't enough hours in the day. Just make something, make it work, and ship it. You can always come back to it later.
 
 ---
-## If you're learning <br>from it others <br>can too
+## If you're learning <br>from it others <br>will learn too
 
-^ BLOG BLOG BLOG
+^ On that note, as I've already mentioned I blogged every day through Cardboctober, and now these posts are conveniently located in one place on my blog. If you're looking to make something with JavaScript for Google Cardboard I'm sure it will be a useful resource for you.
 
 ---
 ## Try not to neglect your house duties, or your loved ones will despise VR
@@ -445,32 +451,43 @@ effect.render(scene, camera)
 ---
 # Stats
 
+^ Let's take a look at some numbers
+
 ---
 ## Max: 31 hacks
 
+^ I managed to do a hack every day. There were a couple of times where I got 1 or 2 days behind, but I still pushed _something_ to Github and then caught up.
+
 ---
-> 64 Commits to main repo
-> 75 Commits to /max/ repo
-> ~10600 Lines of code
+><br>
+> 140~ Commits
+> 10600~ Lines of code
+
+^ Around 140 commits across the cardboctober.xyz and slash max repos. The 45 commits and 2400 lines of code for my blog are not counted here.
 
 ---
 ## Pete: 30 hacks
 
+^ Pete did pretty well, though he was still pushing code last night to catch up!
+
 ---
-> 26 Commits to main repo
-> 64 Commits to /pete/ repo
-> ~15000 Lines of code
+><br>
+> 100~ Commits
+> 15000~ Lines of code
+
+^ Around 100 commits across the cardboctober.xyz and slash pete repos.
 
 ---
 ## Ben: 16 hacks
 
-^ It turns out he's a much busier man than me.
+^ It turns out he's a much busier man than me and Pete.
 
 ---
-> 18 Commits to main repo
-> 85 Commits to /ben/ repo
-> ~10000 Lines of code
+><br>
+> 100~ Commits
+> 10000~ Lines of code
 
+^ Around 100 commits across the cardboctober.xyz and slash pete repos.
 
 ---
 ## In conclusion...
