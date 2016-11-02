@@ -17,18 +17,18 @@ theme: ostrich,6
 ### Aris Technologies
 #### \(we make online casino games)
 
-^ For my day job I work at Aris where I design and build the UI for casino games.
+^ For my day job I work at Aris where I design and build the UI for online casino games.
 
 ---
 ## Web designer/developer
 ### Marmalade & Jam
 #### \(we mostly make websites for pubs)
 
-^ I also run a web design company with my wife, where I mostly seem to make websites for pubs and other small businesses.
+^ I also run a web design company with my wife, where I mostly design and build websites for pubs and other small businesses.
 
 ---
 ## I like to
-## dabble with VR
+## play with VR
 
 ^ If I find myself with any free time I like to dabble with VR. I've been messing around with VR stuff for nearly two years now
 
@@ -38,23 +38,23 @@ theme: ostrich,6
 ###[fit] with Google Cardboard and JavaScript
 ### *omgmog.net/talk20mins*
 
-^ Infact, I gave a talk this time last year called "20 minutes into the future", where I explained how you can use JavaScript to make Google Cardboard experiences. If you missed it, you can check out a video and write-up on my website
+^ Infact, I gave a talk this time last year called "20 minutes into the future", where I explained how you can use JavaScript to make Google Cardboard experiences. If you missed it, you can check out the video and write-up on my website
 
 ---
 ![](images/uxofvr.png)
 ## UX of VR
 ### *uxofvr.com*
-^ Shortly after that I created uxofvr.com -- a curated list of articles and resources for learning/applying good UX in your VR projects.
+^ Shortly after that I created uxofvr.com -- a curated list of articles and resources for learning and applying good UX in your VR projects.
 
 ---
 ![](images/CoCXiyCXgAATON1.jpg)
 ## Game Dev Day
 ### Summer of Hacks 2016
-^ Most recently, this summer for the JS Oxford Summer of Hacks, I organised Game Dev Day. I encouraged people to create VR hacks!
+^ This summer for the JS Oxford Summer of Hacks, I organised Game Dev Day. I encouraged people to create VR hacks!
 
 ---
 ## After that...
-^ So after that I was looking for another VR project to work on
+^ So I was looking for another VR project to work on
 
 ---
 ## And then in September
@@ -83,7 +83,7 @@ theme: ostrich,6
 ---
 ![inline](images/google-cardboard.png)
 # Cardboctober
-^ And so with two days until it began, the idea of Cardboctober was born
+^ And so with two days until it began, the idea of Cardboctober was born. I built a website and we announced Cardboctober at JS Oxford
 
 ---
 ## 31 days
@@ -96,7 +96,7 @@ theme: ostrich,6
 ## **EASY MODE**
 ### **join in sometimes**
 
-^ We encouraged others to participate, but unsurprisingly few took part.
+^ We encouraged others to participate.
 
 ---
 ![](images/regular.gif)
@@ -116,7 +116,7 @@ theme: ostrich,6
 ## I made some
 ## cool things...
 
-^ and I think I made some pretty cool things
+^ and in the end I made some pretty cool things
 
 ---
 ![inline fill](images/giphy-06.gif)![inline fill](images/giphy-08.gif)
@@ -153,7 +153,7 @@ theme: ostrich,6
 ## Check them out
 ### cardboctober.xyz
 
-^ You should check them out if you didn't follow Cardboctober as it happened, all of the hacks should work in Chrome on Android on devices with a gyroscope, and will probably mostly work in Safari on iPhones
+^ You should check them out if you didn't follow Cardboctober as it happened, all of the hacks will work in Chrome on Android on devices with a gyroscope, and will probably mostly work in Safari on iPhones
 
 ---
 ## How did I do it?
@@ -218,7 +218,7 @@ var update = function () {
 update();
 ```
 
-^ Using request animation frame we can smoothly animate the scene, for example we could rotate the cube we've created on it's axis.
+^ Using request animation frame we can animate the scene, for example we could rotate the cube we've created on it's axis.
 
 ---
 # Here's one I made earlier
@@ -268,7 +268,7 @@ effect.render(scene, camera)
 ---
 ![inline](images/basic-vr-stereo.gif)
 
-^ And that's it. That's the basics.
+^ And that's it. You've got a stereoscopic scene.
 
 ---
 #[fit] :boom: :package: 🕶 :boom:
@@ -328,13 +328,13 @@ effect.render(scene, camera)
 ---
 ![inline](images/zombies.gif)
 
-^ Zombie survival. Well this wasn't so much a use of web apis -- I just got frustrated trying to make a demo that used the gamepad API, and so decided to make this instead. The zombies move towards the player and when they get too close you die. You can move around by looking at the area you wish to move to and tapping the screen.
+^ Zombie survival wasn't so much a use of web apis -- I just got frustrated trying to make a demo that used the gamepad API, and so decided to make this instead. The zombies move towards the player and when they get too close you take damage until you die. You can move around by looking at the area you wish to move to and tapping the screen.
 
 ---
 ### Week 3
 ## UX of VR
 
-^ For the third week I focussed mainly on writing VR UX articles rather than creating demos...
+^ For the third week I focussed mainly on writing VR UX articles rather than creating hacks...
 
 ---
 ![](images/holiday1.jpg)
@@ -354,7 +354,7 @@ effect.render(scene, camera)
 ---
 ![inline](images/hierarchy1.png)
 
-^ You might have seen some variation of this chart before
+^ You might have seen some variation of this chart before. This is a variation on Maslow's hierarchy of needs, applied to the UX of virtual reality
 
 ---
 ![inline](images/hierarchy2.png)
@@ -374,7 +374,7 @@ effect.render(scene, camera)
 ### Week 4
 ## A big project
 
-^ For week 4 I decided it would be a good idea to do a week-long project
+^ For the last week of Cardboctober, I decided it would be a good idea to do a big week-long project
 
 ---
 ![inline](images/tevris.png)
@@ -384,12 +384,12 @@ effect.render(scene, camera)
 ---
 ![inline](images/tevris.gif)
 
-^ I figured it would be a good project as it would bring together a lot of the things I had been working on all month
+^ I figured it would be a good project as it would bring together a lot of the things I had been working on all month... mesh generation, raycasting, using sounds...
 
 ---
 ![](images/wall.jpg)
 
-^ Unfortunately, and perhaps appropriately I hit a wall and couldn't get past the collision detection and line storing when applying Tetris to VR. I ended up writing and re-writing my implementation.
+^ Unfortunately, and perhaps appropriately I hit a wall and couldn't get past the collision detection and line storing when applying Tetris to VR. Annoyingly I burned a couple of days writing and re-writing my implementation.
 
 ---
 ![inline](images/pram.gif)
@@ -404,7 +404,7 @@ effect.render(scene, camera)
 ---
 ![inline](images/spider.gif)
 
-^ for the last day of Cardboctober and Halloween, I build a spider from shape primitives and made it crawl around in the shadows.
+^ for the last day of Cardboctober and Halloween, I build a spider from the sphere and cylinder shape primitives and made it crawl around in the shadows.
 
 ---
 ![inline](images/spider.png)
@@ -415,8 +415,12 @@ effect.render(scene, camera)
 ## What have
 ## I learned?
 
+^ So now that Cardboctober is over, what have I taken away from the experience?
+
 ---
 ## Doing something<br>every day for a<br>month is hard
+
+^ Doing something every day is hard.
 
 ---
 ## I've learned so much about VR and 3D
