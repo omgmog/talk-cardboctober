@@ -55,7 +55,7 @@ theme: ostrich,6
 ^ So I was looking for another VR project to work on
 
 ---
-## And then in September
+## And then in <br>September
 ^ Then in September, Ben sent me a message on the Digital Oxford Slack
 
 ---
@@ -112,7 +112,7 @@ theme: ostrich,6
 
 ---
 ## I made some
-## cool things...
+## cool things
 
 ^ and in the end I made some pretty cool things
 
@@ -149,12 +149,12 @@ theme: ostrich,6
 
 ---
 ## Check them out
-### cardboctober.xyz
+### *cardboctober.xyz*
 
 ^ You should check them out if you didn't follow Cardboctober as it happened, all of the hacks will work in Chrome on Android on devices with a gyroscope, and will probably mostly work in Safari on iPhones
 
 ---
-## How did I do it?
+## How did <br>I do it?
 
 ^ 31 days of making stuff is a lot of work. So how did I do it? Well, for me it began with a lot of planning...
 
@@ -348,7 +348,7 @@ effect.render(scene, camera)
 ^ In the Lake district.
 
 ---
->The UX of quick Google Cardboard experiences
+>The UX of quick Google <br>Cardboard experiences
 
 ^ For example I wrote about the UX of quick google cardboard experiences
 
@@ -424,7 +424,7 @@ effect.render(scene, camera)
 ^ Doing something every day is hard.
 
 ---
-## I've learned <br>so much about <br>VR and 3D
+## I've learned <br>lots about <br>VR and 3D
 
 ^ Even though my hacks were quite simple, I feel like I've learned a lot. I still don't quite know what a quaternion is but I think I used one in a couple of places.
 
