@@ -48,7 +48,7 @@ theme: ostrich,6
 ![](images/CoCXiyCXgAATON1.jpg)
 ## Game Dev Day
 ### Summer of Hacks 2016
-^ This summer for the JS Oxford Summer of Hacks, I organised Game Dev Day. I encouraged people to create VR hacks!
+^ This summer for Summer of Hacks, I co-organised Game Dev Day. I encouraged people to create VR hacks!
 
 ---
 ## After that...
@@ -56,7 +56,7 @@ theme: ostrich,6
 
 ---
 ## And then in September
-^ Then in September, Ben Foxall sent me a message on the Digital Oxford Slack
+^ Then in September, Ben sent me a message on the Digital Oxford Slack
 
 ---
 ![inline fit](images/Chat.png)
@@ -473,7 +473,7 @@ effect.render(scene, camera)
 ---
 ## Pete: 30 hacks
 
-^ Pete did pretty well, though he was still pushing code last night to catch up!
+^ Pete did pretty well, though he was still pushing code in November.
 
 ---
 ><br>
