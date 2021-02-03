@@ -1,0 +1,1215 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDo1cHh9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMCA2MGgtNWE1IDUgMCAwMS01LTVWMjBhNSA1IDAgMDE1LTVoNjBhNSA1IDAgMDE1IDV2NU0zMCA4NWg2MCIvPjxyZWN0IHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIi8+PHJlY3QgY2xhc3M9ImEiIHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNDAgNTBoNDBNNDAgNjBoMzAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;z-index:-1;pointer-events:none;opacity:0}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;z-index:0;pointer-events:auto;opacity:1}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1;will-change:transform}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{font-family:Helvetica,Arial,sans-serif;height:100%;left:0;position:absolute;top:0;width:100%;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;grid-template-areas:"current next" "current note" "info    note"}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;position:relative;overflow:hidden}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;top:20px;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{margin:20px;width:calc(100% - 40px);height:calc(100% - 40px);box-sizing:border-box;font-size:1.1em;overflow:auto;padding-right:3px;white-space:pre-wrap;word-wrap:break-word;scrollbar-width:thin;scrollbar-color:hsla(0,0%,93.3%,.5) transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93.3%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{display:block;box-sizing:border-box;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{display:block;overflow-x:auto;padding:.5em;background:#000;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{top:0;left:0}div#p>svg>foreignObject>section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#p>svg>foreignObject>section{background-image:linear-gradient(135deg,hsla(0,0%,53.3%,0),hsla(0,0%,53.3%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;word-wrap:break-word;color:#455a64;background-color:#fff8e1}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:#0288d1}div#p>svg>foreignObject>section code{background:#6a7a7d;color:#fff8e1}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#0288d1}div#p>svg>foreignObject>section pre>code{background:#455a64}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:#6a7a7d}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:#455a64}div#p>svg>foreignObject>section table thead th{background:#455a64;color:#fff8e1}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:rgba(69,90,100,.1)}div#p>svg>foreignObject>section.invert{color:#fff8e1;background-color:#455a64}div#p>svg>foreignObject>section.invert a,div#p>svg>foreignObject>section.invert mark{color:#81d4fa}div#p>svg>foreignObject>section.invert code{background:#dad8c8;color:#455a64}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.invert pre>code{background:#fff8e1}div#p>svg>foreignObject>section.invert blockquote:after,div#p>svg>foreignObject>section.invert blockquote:before,div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header,div#p>svg>foreignObject>section.invert section:after{color:#dad8c8}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#fff8e1}div#p>svg>foreignObject>section.invert table thead th{background:#fff8e1;color:#455a64}div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.gaia{color:#fff8e1;background-color:#0288d1}div#p>svg>foreignObject>section.gaia a,div#p>svg>foreignObject>section.gaia mark{color:#81d4fa}div#p>svg>foreignObject>section.gaia code{background:#cce2de;color:#0288d1}div#p>svg>foreignObject>section.gaia h1 strong,div#p>svg>foreignObject>section.gaia h2 strong,div#p>svg>foreignObject>section.gaia h3 strong,div#p>svg>foreignObject>section.gaia h4 strong,div#p>svg>foreignObject>section.gaia h5 strong,div#p>svg>foreignObject>section.gaia h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.gaia pre>code{background:#fff8e1}div#p>svg>foreignObject>section.gaia blockquote:after,div#p>svg>foreignObject>section.gaia blockquote:before,div#p>svg>foreignObject>section.gaia footer,div#p>svg>foreignObject>section.gaia header,div#p>svg>foreignObject>section.gaia section:after{color:#cce2de}div#p>svg>foreignObject>section.gaia table td,div#p>svg>foreignObject>section.gaia table th{border-color:#fff8e1}div#p>svg>foreignObject>section.gaia table thead th{background:#fff8e1;color:#0288d1}div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.lead{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section:after{right:0;bottom:0;font-size:80%}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a{text-decoration:none;color:inherit}div#p>svg>foreignObject>section{display:flex;flex-direction:column;justify-content:center}div#p>svg>foreignObject>section.center{text-align:center}div#p>svg>foreignObject>section.flexwrap{flex-wrap:wrap}div#p>svg>foreignObject>section.flexrow{flex-direction:row}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{color:#fff}div#p>svg>foreignObject>section header{background-color:rgba(0,0,0,.2)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="1" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content>HELLO</span></foreignObject></svg></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="2" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <a href="http://omgmog.net">omgmog.net</a></span></foreignObject></svg></h3>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <a href="http://blog.omgmog.net">blog.omgmog.net</a></span></foreignObject></svg></h3>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong>Twitter/Github/Slack <img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> @omgmog</strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="3" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> UX/Front-end Developer</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Aris Technologies</span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="4" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> I also like to</span></foreignObject></svg></h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> play with VR</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="5" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/CUHjrioWsAQq0On.jpg&quot;);background-size:cover;filter:brightness(.2);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="5" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> 20 minutes into the future</span></foreignObject></svg></h3>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> with Google Cardboard and JavaScript</span></foreignObject></svg></h3>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong><a href="http://omgmog.net/talk20mins">omgmog.net/talk20mins</a></strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="5" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="6" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/uxofvr.png&quot;);background-size:cover;filter:brightness(.2);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="6" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> UX of VR</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong><a href="http://uxofvr.com">uxofvr.com</a></strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="6" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="7" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/CoCXiyCXgAATON1.jpg&quot;);background-size:cover;filter:brightness(.4);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="7" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Game Dev Day</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong>Summer of Hacks 2016</strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="7" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="8" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> And then in</span></foreignObject></svg></h3>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> September</span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="9" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/Chat.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="9" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="9" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="10" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/Chat%20Copy.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="10" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="10" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="11" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/Chat%20Copy%202.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="11" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="11" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="12" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/Chat%20Copy%203.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="12" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="12" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="13" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/google-cardboard.png&quot;);background-size:contain;filter:opacity(.4) invert(1);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="13" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Cardboctober</span></foreignObject></svg></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="13" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="center" data-marpit-pagination="14" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1>31 days</h1>
+<h2>of making things</h2>
+<h2>for Google Cardboard</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="15" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/easy.gif&quot;);background-size:contain;filter:opacity(.8);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="15" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> EASY MODE</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong>join in sometimes</strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="15" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="16" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/regular.gif&quot;);background-size:cover;filter:opacity(.8);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="16" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> REGULAR MODE</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong>join in every day</strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="16" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="17" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/hard.gif&quot;);background-size:cover;filter:opacity(.5);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="17" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> HARD MODE</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong>all of above &amp; blog daily</strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="17" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="18" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> I made some</span></foreignObject></svg></h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> cool things</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="flexwrap center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="flexwrap center" data-marpit-pagination="19" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:flexwrap center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<p><img src="images/giphy-06.gif" alt="" /><br />
+<img src="images/giphy-08.gif" alt="" /><br />
+<img src="images/giphy-09.gif" alt="" /></p>
+<p><img src="images/giphy-10.gif" alt="" /><br />
+<img src="images/giphy-11.gif" alt="" /><br />
+<img src="images/giphy-13.gif" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="20" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> And so did</span></foreignObject></svg></h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> other people</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="21" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;images/pete-06.png&quot;);"></figure><figure style="background-image:url(&quot;images/pete-15.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="21" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @peterjwest</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="21" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="22" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;images/pete-17.png&quot;);"></figure><figure style="background-image:url(&quot;images/pete-20.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="22" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @peterjwest</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="22" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="23" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;images/pete-26.png&quot;);"></figure><figure style="background-image:url(&quot;images/pete-27.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @peterjwest" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="23" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @peterjwest;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @peterjwest</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="23" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="24" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/ben-02.png&quot;);"></figure><figure style="background-image:url(&quot;images/ben-03.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="24" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @benjaminbenben</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="24" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="25" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/ben-05.png&quot;);"></figure><figure style="background-image:url(&quot;images/ben-06.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="25" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @benjaminbenben</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="25" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="26" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/ben-09.png&quot;);"></figure><figure style="background-image:url(&quot;images/ben-16.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-header="by @benjaminbenben" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="26" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--header:by @benjaminbenben;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<header>by @benjaminbenben</header>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="26" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="27" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Check them out</span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong><a href="http://cardboctober.github.io">cardboctober.github.io</a></strong></span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="center" data-marpit-pagination="28" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1>So... How did I do it?</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="29" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/spreadsheet.png&quot;);filter:brightness(.8);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="29" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="29" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="30" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2>Week 1</h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Basic VR</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="31" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/dummies.png&quot;);background-size:cover;filter:brightness(.2);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="31" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content">
+<h2>VR</h2>
+<h3>for dummies</h3>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="31" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="32" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;three.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+      <span class="hljs-comment">// !</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="33" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// Setup the camera, renderer, scene, etc.</span>
+
+<span class="hljs-comment">// Make a cube</span>
+<span class="hljs-keyword">var</span> geometry = <span class="hljs-keyword">new</span> THREE.BoxGeometry(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>);
+<span class="hljs-keyword">var</span> material = <span class="hljs-keyword">new</span> THREE.MeshBasicMaterial({
+  <span class="hljs-attr">color</span>: <span class="hljs-number">0xff0000</span>
+});
+
+<span class="hljs-keyword">var</span> cube = <span class="hljs-keyword">new</span> THREE.Mesh(geometry,material);
+
+scene.add(cube);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="34" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> update = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  cube.rotation.x += <span class="hljs-number">.1</span>;
+  cube.rotation.z += <span class="hljs-number">.1</span>;
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(update);
+};
+
+<span class="hljs-comment">// Call it once to begin</span>
+update();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="35" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/basic-vr.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="35" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="35" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="36" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2>That's not VR</h2>
+<h3>That's just a spinning cube!</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="37" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;three.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;StereoEffect.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+      <span class="hljs-comment">// !</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="38" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// After setting up your renderer</span>
+effect = <span class="hljs-keyword">new</span> THREE.StereoEffect(renderer);
+effect.eyeSeparation = <span class="hljs-number">1</span>; <span class="hljs-comment">// Set the IPD</span>
+effect.setSize( width, height );
+
+<span class="hljs-comment">// Instead of calling</span>
+<span class="hljs-comment">// renderer.render(scene, camera)</span>
+effect.render(scene, camera)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="39" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/basic-vr-stereo.gif&quot;);background-size:105%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="39" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="39" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="40" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/orientation.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="40" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="40" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="41" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <img class="emoji" draggable="false" alt="💥" src="https://twemoji.maxcdn.com/2/svg/1f4a5.svg" data-marp-twemoji=""/> <img class="emoji" draggable="false" alt="📦" src="https://twemoji.maxcdn.com/2/svg/1f4e6.svg" data-marp-twemoji=""/> 🕶 <img class="emoji" draggable="false" alt="💥" src="https://twemoji.maxcdn.com/2/svg/1f4a5.svg" data-marp-twemoji=""/></span></foreignObject></svg></h2>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <img class="emoji" draggable="false" alt="👉" src="https://twemoji.maxcdn.com/2/svg/1f449.svg" data-marp-twemoji=""/> <a href="http://blog.omgmog.net/cardboctober">blog.omgmog.net/cardboctober</a> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="center" data-marpit-pagination="42" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3>Raycasting</h3>
+<h3>Skyboxes</h3>
+<h3>Textures</h3>
+<h3>Mesh generation</h3>
+<h3>Using .stl models</h3>
+<h4>and...</h4>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="43" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/findben.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="43" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="43" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="44" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2>Week 2</h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> HTML5 Web APIs</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="center" data-marpit-pagination="45" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3>Video</h3>
+<h3>Playing sounds</h3>
+<h3>Speech recognition</h3>
+<h3>Zombie Survival</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="46" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/video.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="46" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="46" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="47" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/beats.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="47" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="47" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="48" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/speech.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="48" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="48" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="49" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/zombies.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="49" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="49" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="50" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2>Week 3</h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> UX of VR</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="51" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/holiday2.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="51" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="51" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="52" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> The UX of quick <br />Google Cardboard hacks</span></foreignObject></svg></h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="53" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/hierarchy1.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="53" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="53" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="53" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="54" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/hierarchy2.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="54" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="54" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-class="center" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" class="center" data-marpit-pagination="55" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--class:center;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h3>Getting in and out of Fullscreen</h3>
+<h3>Moving around in VR</h3>
+<h3>Which way is North?</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="56" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2>Week 4</h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> The big project</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="57" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/tevris.png&quot;);background-size:contain;filter:invert(1);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="57" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="57" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="58" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/tevris.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="58" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="58" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="59" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/wall.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="59" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="59" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="60" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/pram.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="60" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="60" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="61" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/github.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="61" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="61" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="62" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/spider.gif&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="62" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="62" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="63" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/spider.png&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="63" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="color:#f0f0f0;" data-marpit-advanced-background="pseudo" data-marpit-pagination="63" data-marpit-pagination-total="77"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="64" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> What have</span></foreignObject></svg></h2>
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> I learned?</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="65" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Doing something<br />every day for a<br />month is hard</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="66" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> I've learned <br />lots about <br />VR and 3D</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="67" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Save time/sanity <br />by factoring out <br />common code.</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="68" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Test your ideas <br />often, and on <br />other people</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="69" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Don't worry <br />about making <br />it perfect</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="70" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> If you're learning <br />from it then others <br />can learn too</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="71" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Final numbers</span></foreignObject></svg></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="72" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Max: 31 hacks</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="73" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Pete: 31 hacks</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="74" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> Ben: 18 hacks</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="75" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h2><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> In conclusion</span></foreignObject></svg></h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="76" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content>  Nocodevember</span></foreignObject></svg></h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-paginate="true" data-background-color="black" data-color="#f0f0f0" data-theme="gaia" data-style="a { text-decoration: none; color: inherit }
+section { display: flex; flex-direction: column; justify-content: center;}
+section.center { text-align: center }
+section.flexwrap { flex-wrap: wrap;}
+section.flexrow { flex-direction: row;}
+header, footer { color: #fff}
+header { background-color: rgba(0,0,0,.2);}
+" data-marpit-pagination="77" data-marpit-pagination-total="77" style="--paginate:true;--background-color:black;--color:#f0f0f0;--theme:gaia;
+;color:#f0f0f0;background-color:black;background-image:none;">
+<h1><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content>  THANKS</span></foreignObject></svg></h1>
+<h3><svg data-marp-fitting="svg"><foreignObject><span data-marp-fitting-svg-content> <strong><a href="http://cardboctober.github.io">cardboctober.github.io</a></strong></span></foreignObject></svg></h3>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>^ Hello... Surprise! I'm up here again talking about VR and Javascript.</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>^ I'm Max Glenister. If you don't know me already, you can find out more at any of these places or pay attention for the next couple of slides.</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>^ For my day job I work for a company called Aris where I design and build the UI for online casino games.</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>^ If I find myself with any free time I like to play with VR. &lt;br&gt;I've been messing around with VR stuff for nearly two years now</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>^ I gave a talk this time last year called &quot;20 minutes into the future&quot; where I explained how you can use JavaScript to make Google Cardboard experiences. &lt;br&gt;If you missed it, you can check out the video and write-up on my website.</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>^ Shortly after that I created uxofvr.com which is a curated list of articles and resources for learning how to apply the best UX in your VR projects.</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>^ At this year's Summer of Hacks, I co-organised Game Dev Day with Pete. &lt;br&gt;I encouraged people to create VR hacks!</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>^ After the summer I was looking for another VR project to work on and then Ben sent me a message</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>^ Hey Max</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>^ Hey Ben</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>^ Do you fancy doing a month of google cardboard hacks?</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>^ And so with two days until it began, the idea of Cardboctober was born.</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>^ I built a website and we announced Cardboctober at September's JS Oxford. &lt;br&gt;At this point we managed to convince Pete to take part too.</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>^ The plan was simple, we would make something small for Google Cardboard each day for the month of October</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>^ We encouraged others to participate.</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>^ Pete and Ben planned to just make something each day</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>^ I decided it would be fun to make something each day and also blog about it.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>^ and in the end I made some pretty cool things</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>^ Including a pairs game, a beat sequencer, and a vr cinema. &lt;br&gt;I'll talk about these more a bit later</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>^ Pete and Ben also made some cool things...</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>^ Pete's hacks were polished, and brought together some complex maths and cool interaction techniques.</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>^ Ben's hacks were quite abstract, and I think he wrote a 3D renderer from scratch or something crazy rather than just using Three.js like me and Pete.</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>^ You should check them out if you didn't follow Cardboctober as it happened &lt;br&gt;all of the hacks will work in Chrome on most Android devices, and will probably work in Safari on iPhones</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>^ 31 days of making stuff is a lot of work. So how did I do it? Well, for me it began with a lot of planning...</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>^ I made a spreadsheet, and in that I broke the month down in to themed weeks, and then each week in to a project per day. &lt;br&gt;This really helped to stop Cardboctober seeming like a huge undertaking.</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>^ In the first week I covered Basic VR.</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>^ Getting started with VR is really easy. Here's a quick guide...</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>^ First you need to create an HTML page and load three.js</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>^ Then as you do with any Three.js project, setup your camera, renderer, scene, etc. &lt;br&gt;Then you could define a cube mesh and add it to your scene.</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>^ Using request animation frame we can animate the scene, for this example we're rotating the cube we've created on it's axis.</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>^ Here's one I made earlier.</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>^ You may have noticed that this isn't VR. &lt;br&gt;Three.js comes with a plugin called &quot;stereo effect&quot; that will automatically create a side-by-side stereoscopic view of our scene so that we can use it in VR with Google Cardboard.</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>^ Just load the StereoEffect plugin in your HTML page</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>^ Then initialise it after your renderer, and call it inside your update function</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>^ And that's it. You've now got a stereoscopic scene. You've got VR. &lt;br&gt;The way this works is both halves of this image are slightly different, and each is only seen by one eye.</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>^ Besides rendering in stereo, you can use the orientation of your device to give you basic head tracking so that you can look around in VR too. &lt;br&gt;But I don't have the time to cover that tonight.</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>^ Don't worry about remembering all of this, as with everything else I'm talking about this evening, you can find how to do this in more detail on the cardboctober section of my blog.</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>^ In week 1 I also covered some other things... raycasting to determine where you're looking or what you're looking at &lt;br&gt;skyboxes to provide a nice backdrop for your scene &lt;br&gt;loading textures and generating 3D meshes so you can create more than just red boxes &lt;br&gt;using pre-made models such as storm troopers and not the droid's you're looking for and lastly...</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>^ a pairs game that pulled together all of the concepts from week 1. &lt;br&gt;In this game, you look at a tile to flip it and see the image, and then you've got to find the matching tile to create a pair. &lt;br&gt;This makes use of Marcus' Benholder repository of Bens faces. Thanks Marcus.</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>^ For week 2 I decided to look at using Web APIs.</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>^ Web browsers can do lots of cool stuff these days, such as playing video and audio without plugins and speech recognition. &lt;br&gt;I decided to try and put some of these web APIs to use. &lt;br&gt;Here are some of the things I made in Week 2.</p></div><div class="bespoke-marp-note" data-index="45" tabindex="0"><p>^ I created a vr cinema to showcase playing video. &lt;br&gt;In this hack I'm extracting the dominant colors from each frame and using them to light the scene. &lt;br&gt;Unfortunately, I found that rendering video in 3D and extracting colors from each frame really made my phone choke, but it ran nicely on my PC!</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>^ I built a beat sequencer to showcase playing audio. &lt;br&gt;In this hack you're surrounded by 200 degrees of sound board, where you can pick the sounds to play in a sequence by looking at a square on the board and tapping the screen. &lt;br&gt;Behind you are some controls to pause and reset the sequencer.</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>^ I decided to make something that uses Speech recognition as an input method. &lt;br&gt;In this hack I set up a bunch of commands such as &quot;move forward&quot; and &quot;move left&quot;. &lt;br&gt;You tap the screen and the microphone starts listening for your command, once it matches a command the ball moves around in 3D space. You can even ask it to tell you a joke.</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>^ Zombie survival wasn't so much a use of web apis -- I just got frustrated trying to make a demo that used the gamepad API. &lt;br&gt;The zombies move towards the player and when they get too close you take damage until you die. You can move around by looking at the area you wish to move to and tapping the screen to teleport there.</p></div><div class="bespoke-marp-note" data-index="49" tabindex="0"><p>^ For the third week I focussed mainly on writing VR UX articles rather than creating hacks...</p></div><div class="bespoke-marp-note" data-index="50" tabindex="0"><p>^ Because I was on holiday</p></div><div class="bespoke-marp-note" data-index="51" tabindex="0"><p>^ I started by writing about the UX of quick google cardboard hacks</p></div><div class="bespoke-marp-note" data-index="52" tabindex="0"><p>^ You might have seen some variation of this chart before. This is Maslow's hierarchy of needs, applied to virtual reality.&lt;br&gt;Comfort is the most important need, all the way through to delight. &lt;br&gt;If you can nail comfort and interpretability the idea is you can make the user feel like they're actually present in VR.&lt;br&gt;Everything else above that is a bonus.</p></div><div class="bespoke-marp-note" data-index="53" tabindex="0"><p>^ There are obviously comfort hurdles with Google Cardboard already... there isn't usually a headstrap; the lenses aren't great; your phone can't maintain a smooth framerate. &lt;br&gt;If you're thinking up and creating something in one day it's probably not going to be very useful, but it can be delightful.&lt;br&gt;So I decided this was all that matters when you've got 2 hours a day to ship something.</p></div><div class="bespoke-marp-note" data-index="54" tabindex="0"><p>^ These are some of the other bits I wrote about for the rest of the week. &lt;br&gt;As I worked out my ideas for things such as entering fullscreen or determining where North is, I applied the learning retroactively to all of my cardboctober hacks. &lt;br&gt;These posts were not very demo-heavy, so they're not worth showing here tonight but if you want to know more you can go and read them on my blog.</p></div><div class="bespoke-marp-note" data-index="55" tabindex="0"><p>^ For the last week of Cardboctober, I decided it would be a good idea to do a big week-long project</p></div><div class="bespoke-marp-note" data-index="56" tabindex="0"><p>^ So I embarked on building Tetris in VR</p></div><div class="bespoke-marp-note" data-index="57" tabindex="0"><p>^ I figured it would be a good project as it would bring together a lot of the things I had been working on all month... mesh generation, raycasting, using sounds...</p></div><div class="bespoke-marp-note" data-index="58" tabindex="0"><p>^ Unfortunately, and perhaps appropriately I hit a wall and couldn't get past things such as the collision detection when applying Tetris to VR. &lt;br&gt;Annoyingly I burned a couple of days writing and re-writing my implementation.</p></div><div class="bespoke-marp-note" data-index="59" tabindex="0"><p>^ In hindsight creating Tetris in just 2-hour blocks over a week was over-ambitious, so I gave up on that and threw my blocks out of the pram and decided to do something else instead.</p></div><div class="bespoke-marp-note" data-index="60" tabindex="0"><p>^ I built a visualisation of my github contributions. &lt;br&gt;This takes the data that Github uses to build that cool little grid on your Github profile, which by the way is only available as SVG rather than as a nice API endpoint. &lt;br&gt;I mangled the SVG a bit to make it usable as a data source and generated a nice circular grid with the data. &lt;br&gt;You can see my streak there for October 2016.</p></div><div class="bespoke-marp-note" data-index="61" tabindex="0"><p>^ for the last day of Cardboctober and Halloween, I built a creepy spider and made it crawl around in the shadows just out of reach.</p></div><div class="bespoke-marp-note" data-index="62" tabindex="0"><p>^ look at the cute little guy! he's built using just spheres and cylinders.</p></div><div class="bespoke-marp-note" data-index="63" tabindex="0"><p>^ So now that Cardboctober is over, what have I taken away from the experience?</p></div><div class="bespoke-marp-note" data-index="64" tabindex="0"><p>^ Doing something every day is hard. &lt;br&gt;Motivation aside, life will always throw something in the way. &lt;br&gt;Planning upfront and doing work to get yourself ahead of the curve during the busy times will make the whole process a lot easier.&lt;br&gt;If you're doing something mental like creating a hack and a blog post each day, focus on getting the hack out first and don't worry about being a little late with the blog post.&lt;br&gt;If what you write is total crap you can always come back to it later.</p></div><div class="bespoke-marp-note" data-index="65" tabindex="0"><p>^ Even though my hacks were quite simple, I feel like I've learned a lot. &lt;br&gt;The nice thing about doing a month of hacks with other people is the option to rebound and discuss ideas. &lt;br&gt;Pete did some cool stuff with using a raycaster to move one day, and then I stole it from him the next day. &lt;br&gt;I still don't quite know what a quaternion is but I think I used one in a couple of places.</p></div><div class="bespoke-marp-note" data-index="66" tabindex="0"><p>^ Save time and your sanity by factoring out common code. &lt;br&gt;I decided early on to create a &quot;core.js&quot; file. &lt;br&gt;This contained functions that setup the boilerplate for a three.js scene, and I also created some functions to wrap around common tasks like building meshes. &lt;br&gt;If you're interested, check out my &quot;three-skeleton&quot; repository on Github.</p></div><div class="bespoke-marp-note" data-index="67" tabindex="0"><p>^ Test your ideas often, and on other people. &lt;br&gt;It's good to get a second or third perspective. &lt;br&gt;People experience things differently, what works for your eyes might not work for other people, it's hard to have a helicopter view of something you've been staring at for 3 hours late at night.</p></div><div class="bespoke-marp-note" data-index="68" tabindex="0"><p>^ Don't worry about making it perfect. &lt;br&gt;These are quick hacks so you can't be precious. &lt;br&gt;There aren't enough hours in the day. &lt;br&gt;You can forgo your unit tests and extensive cross-device testing. &lt;br&gt;Just make something, make it work, and ship it. You can always come back to it later.</p></div><div class="bespoke-marp-note" data-index="69" tabindex="0"><p>^ If you're learning from it then others can learn too. &lt;br&gt;On this note, as I've already mentioned I blogged every day through Cardboctober, and now these posts are conveniently located in one place on my blog. &lt;br&gt;If you're looking to make something with JavaScript for Google Cardboard I'm sure it will be a useful resource for you.</p></div><div class="bespoke-marp-note" data-index="70" tabindex="0"><p>^ Let's take a look at some numbers. &lt;br&gt;I was going to have a breakdown of the commits per person, per repository here, and total lines of code but because Pete used webpack and gulp and he and Ben haven't heard of sharing common code between hacks it was hard to get accurate numbers.</p></div><div class="bespoke-marp-note" data-index="71" tabindex="0"><p>^ I managed to do a hack and a blog post every day. &lt;br&gt;There were a couple of times where I got 1 or 2 days behind, but I still pushed _something_ to Github and then caught up.</p></div><div class="bespoke-marp-note" data-index="72" tabindex="0"><p>^ Pete did pretty well, though he was still pushing code in November.</p></div><div class="bespoke-marp-note" data-index="73" tabindex="0"><p>^ Well, Ben only officially published 16 but he has 18 up on Github. &lt;br&gt;It turns out he's a much busier man than me and Pete.</p></div><div class="bespoke-marp-note" data-index="74" tabindex="0"><p>^ Cardboctober was a really fun month, I learned a lot and it was great pushing myself to create something new each day. &lt;br&gt;If you wanted to do something like this every day for a month, you should. No matter what it is that you're doing, if you do it for 31 days you will get something out of it.&lt;br&gt;Since the end of Cardboctober I've been enjoying...</p></div><div class="bespoke-marp-note" data-index="75" tabindex="0"><p>^ I've not made any new VR stuff in November and my wife is happy about that but I recently bought a HTC Vive so I'm playing with that whenever I can.</p></div><div class="bespoke-marp-note" data-index="76" tabindex="0"><p>^ any questions?</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},i=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},o=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",i(n,t)),n=s[e],l("activate",i(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",i(n,t))&&c(r,t)},u={off:o,on:function(e,t){return(a[e]||(a[e]=[])).push(t),o.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",i(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",i(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach((e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")})),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))}))}function n(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")}))})),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return s(t,r-1),!1;const a=e.fragments[t+1];a&&s(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return s(t,n-1),!1;const i=t-1;e.fragments[i]&&s(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)})),s(0,0)}
+/*!
+* screenfull
+* v5.0.2 - 2020-02-13
+* (c) Sindre Sorhus; MIT License
+*/
+var r,s=(function(e){!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,a={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)a[n[0][r]]=e[r];return a}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},a={request:function(e){return new Promise(function(n,s){var a=function(){this.off("change",a),n()}.bind(this);this.on("change",a);var i=(e=e||t.documentElement)[r.requestFullscreen]();i instanceof Promise&&i.then(a).catch(s)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s);var a=t[r.exitFullscreen]();a instanceof Promise&&a.then(s).catch(n)}else e()}.bind(this))},toggle:function(e){return this.isFullscreen?this.exit():this.request(e)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(a,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=a:window.screenfull=a):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}(r={exports:{}},r.exports),r.exports);function a(e){e.fullscreen=()=>{s.isEnabled&&s.toggle(document.body)},document.addEventListener("keydown",(t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!s.isEnabled||(e.fullscreen(),t.preventDefault())}))}function i(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout((()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")}),e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const o=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function l(e){e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(o.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))}function c(e){window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}}))}var d;function u({interval:e=200}={}){return t=>{document.addEventListener("keydown",(e=>{if(32===e.which&&e.shiftKey)t.prev();else if(33===e.which||37===e.which||38===e.which)t.prev({fragment:!e.shiftKey});else if(32!==e.which||e.shiftKey)if(34===e.which||39===e.which||40===e.which)t.next({fragment:!e.shiftKey});else if(35===e.which)t.slide(t.slides.length-1,{fragment:-1});else{if(36!==e.which)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,s=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const o=(e,t)=>{e&&(i=i||function(e,t){return function(e,t){const n=t===d.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),(null==e?void 0:e.parentElement)&&o(e.parentElement,t)};if(0!==a.deltaX&&o(a.target,d.X),0!==a.deltaY&&o(a.target,d.Y),i)return;a.preventDefault(),r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const l=Date.now()-s<e,c=Math.sqrt(Math.pow(a.deltaX,2)+Math.pow(a.deltaY,2)),u=c<=n;if(n=c,l||u)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),s=Date.now())}))}}!function(e){e.X="X",e.Y="Y"}(d||(d={}));const f=(...e)=>history.replaceState(...e),m="data-bespoke-view";var p;!function(e){e.Normal="",e.Presenter="presenter",e.Next="next"}(p||(p={}));const h=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${s}`},g=()=>{switch(document.body.getAttribute(m)){case p.Normal:return p.Normal;case p.Presenter:return p.Presenter;case p.Next:return p.Next;default:throw new Error("View mode is not assigned.")}},v=e=>new URLSearchParams(location.search).get(e),b=(e,t={})=>{const n=Object.assign({location:location,setter:f},t),r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter(null,document.title,h(r,n.location))}catch(e){console.error(e)}},w={available:(()=>{try{return localStorage.setItem("bespoke-marp","bespoke-marp"),localStorage.removeItem("bespoke-marp"),!0}catch(e){return console.warn("Warning: Using localStorage is restricted in the current host so some features may not work."),!1}})(),get:e=>{try{return localStorage.getItem(e)}catch(e){return null}},set:(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},remove:e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}}};function y(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return s.isEnabled||n("fullscreen",(e=>e.style.display="none")),w.available||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;switch(n&&t.target.blur(),n){case"next":e.next({fragment:!t.shiftKey});break;case"prev":e.prev({fragment:!t.shiftKey});break;case"fullscreen":"function"==typeof e.fullscreen&&s.isEnabled&&e.fullscreen();break;case"presenter":e.openPresenterView()}}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:s})=>{n("prev",(e=>e.disabled=0===t&&0===s)),n("next",(n=>n.disabled=t===e.slides.length-1&&s===r.length-1))})),e.on("marp-active",(()=>t.removeAttribute("aria-hidden"))),e.on("marp-inactive",(()=>t.setAttribute("aria-hidden","true"))),s.isEnabled&&s.onchange((()=>n("fullscreen",(e=>e.classList.toggle("exit",s.isEnabled&&s.isFullscreen)))))}}function x(){const e=Math.max(Math.floor(.85*window.innerWidth),640),t=Math.max(Math.floor(.85*window.innerHeight),360);return window.open(this.presenterUrl,`bespoke-marp-presenter-${this.syncKey}`,`width=${e},height=${t},menubar=no,toolbar=no`)}function k(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),h(e)}var E=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let L=e=>String(e).replace(/[&<>"']/g,(e=>`&${S[e]};`)),S={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},I="dangerouslySetInnerHTML",P={className:"class",htmlFor:"for"},M={};function N(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==I&&(r+=` ${P[e]?P[e]:L(e)}="${L(t[e])}"`);r+=">"}if(-1===E.indexOf(e)){if(t[I])r+=t[I].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===M[e]?e:L(e)}r+=e?`</${e}>`:""}return M[r]=!0,r}const F=({children:e})=>N(null,null,...e),$="bespoke-marp-presenter-container",O="bespoke-marp-presenter-next",q="bespoke-marp-presenter-next-container",C="bespoke-marp-presenter-note-container",T="bespoke-marp-presenter-info-container",A="bespoke-marp-presenter-info-page",K="bespoke-marp-presenter-info-page-text",j="bespoke-marp-presenter-info-page-prev",R="bespoke-marp-presenter-info-page-next",U="bespoke-marp-presenter-info-time",D="bespoke-marp-presenter-info-timer";function V(e){const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=$,t.appendChild(e),t.insertAdjacentHTML("beforeend",N(F,null,N("div",{class:q},N("iframe",{class:O,src:"?view=next"})),N("div",{class:C}),N("div",{class:T},N("div",{class:A},N("button",{class:j,tabindex:"-1",title:"Previous"},"Previous"),N("span",{class:K}),N("button",{class:R,tabindex:"-1",title:"Next"},"Next")),N("time",{class:U,title:"Current time"}),N("div",{class:D})))),t})(e.parent)),(e=>{r(q).addEventListener("click",(()=>e.next()));const t=r(O),n=(s=t,(e,t)=>{var n;return null===(n=s.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var s;t.addEventListener("load",(()=>{r(q).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(C).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(K).textContent=`${t+1} / ${e.slides.length}`}));const i=r(j),o=r(R);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),o.addEventListener("click",(t=>{o.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,o.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(U).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)}function X(e){const t=g();return t===p.Next&&e.appendChild(document.createElement("span")),e=>{t===p.Normal&&function(e){if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:x},presenterUrl:{enumerable:!0,get:k}}),w.available&&document.addEventListener("keydown",(t=>{80!==t.which||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))}(e),t===p.Presenter&&V(e),t===p.Next&&function(e){const t=t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let s=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[s].length&&(s+=1,a=0),e.slide(s,{fragment:a})}};window.addEventListener("message",t),e.on("destroy",(()=>window.removeEventListener("message",t)))}(e)}}function Y(e){e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))}const B=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function z(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,a=Math.max(0,Math.min(t,s.length-1)),i=Math.max(0,Math.min(n||0,r[a].length-1));a===e.slide()&&i===e.fragmentIndex||e.slide(a,{fragment:i})})((B(location.hash.slice(1))||1)-1,t.fragment?B(v("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||b({f:0===r||r.toString()},{location:Object.assign(Object.assign({},location),{hash:`#${e+1}`}),setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{s(),window.addEventListener("hashchange",(()=>r((()=>{s({fragment:!1}),b({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>s()))})),n=!1}),0)}}let H;function W(e={}){const t=e.key||((e=21)=>{let t="",n=crypto.getRandomValues(new Uint8Array(e));for(;e--;){let r=63&n[e];t+=r<36?r.toString(36):r<62?(r-26).toString(36).toUpperCase():r<63?"_":"-"}return t})(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=w.get(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return w.set(n,JSON.stringify(s)),s};return s((e=>({reference:(e.reference||0)+1}))),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let a=!0;setTimeout((()=>{e.on("fragment",(e=>{a&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);if(n.index!==r.index||n.fragmentIndex!==r.fragmentIndex)try{a=!1,e.slide(r.index,{fragment:r.fragmentIndex})}finally{a=!0}}})),e.on("destroy",(()=>{const{reference:e}=r();void 0===e||e<=1?w.remove(n):s((()=>({reference:e-1})))}))}}function J({slope:e=Math.tan(-35*Math.PI/180),swipeThreshold:t=30}={}){return n=>{let r;const s=n.parent,a=e=>{const t=s.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};s.addEventListener("touchstart",(e=>{r=1===e.touches.length?a(e.touches[0]):void 0}),{passive:!0}),s.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,s=t.y-r.y;r.delta=Math.sqrt(Math.pow(Math.abs(n),2)+Math.pow(Math.abs(s),2)),r.radian=Math.atan2(n,s)}else r=void 0})),s.addEventListener("touchend",(s=>{if(r){if(r.delta&&r.delta>=t&&r.radian){let t=r.radian-e;t=(t+Math.PI)%(2*Math.PI)-Math.PI,n[t<0?"next":"prev"](),s.stopPropagation()}r=void 0}}),{passive:!0})}}
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */function _(e,t,n,r){return new(n||(n=Promise))((function(s,a){function i(e){try{l(r.next(e))}catch(e){a(e)}}function o(e){try{l(r.throw(e))}catch(e){a(e)}}function l(e){var t;e.done?s(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(i,o)}l((r=r.apply(e,t||[])).next())}))}const G=()=>(void 0===H&&(H="wakeLock"in navigator&&navigator.wakeLock),H),Q=()=>_(void 0,void 0,void 0,(function*(){const e=G();if(e)try{const t=yield e.request("screen");return t.addEventListener("release",(()=>{console.debug("[Marp CLI] Wake Lock was released")})),console.debug("[Marp CLI] Wake Lock is active"),t}catch(e){console.warn(e)}return null}));function Z(){return _(this,void 0,void 0,(function*(){if(!G())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Q()};return document.addEventListener("visibilitychange",t),document.addEventListener("fullscreenchange",t),e=yield Q(),e}))}const ee=[p.Normal,p.Presenter,p.Next];!function(r=document.getElementById("p")){document.body.setAttribute(m,(()=>{switch(v("view")){case"next":return p.Next;case"presenter":return p.Presenter;default:return p.Normal}})());const s=(e=>{const t=v(e);return b({[e]:void 0}),t})("sync")||void 0,o=!1,d=!0,f=e(r,((...e)=>{const t=ee.findIndex((e=>g()===e));if(t<0)throw new Error("Invalid view");return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[d,d,o],W({key:s})],[[d,d,d],X(r)],[[d,d,o],l],[[d,d,d],t],[[d,o,o],i()],[[d,d,d],c],[[d,d,d],z({history:!1})],[[d,d,o],u()],[[d,d,o],a],[[d,o,o],Y],[[d,d,o],J()],[[d,o,o],y()],[[d,d,d],n],[[d,d,o],Z]));window.addEventListener("beforeunload",(()=>b({sync:f.syncKey}))),window.addEventListener("unload",(()=>f.destroy()))}()}();</script></body></html>
